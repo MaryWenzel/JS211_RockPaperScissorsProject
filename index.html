@@ -1,15 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="main.js"></script>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
-    <hr/>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  
+  <div class="score">
+    <div class="player-score">
+      <h2>Player</h2>
+      <p>0</p>
+    </div>
+    <div class="computer-score">
+      <h2>Computer</h2>
+      <p>0</p>
+    </div>
+  </div>
+  <section class="game">
+    <!-- SCORE BOARD -->
+    <div class="intro">
+      <h1>Rock Paper Scissors</h1>
+      <button>LET'S GO!</button>
+    </div>
+
+    <div class="match fadeOut">
+      <h2 class="winner">Pick Your Poison.</h2>
+      <div class="hands">
+        <img src="./images/rock.png" alt="" class="player-hand">
+        <img src="./images/rock.png" alt="" class="computer-hand">
+      </div>
+      <div class="options">
+        <button class="rock">rock</button>
+        <button class="paper">paper</button>
+        <button class="scissors">scissors</button>
+      </div>
+    </div>
+    
+    
+  </section>
+
+  <script src="main.js"></script>
+</body>
 </html>
