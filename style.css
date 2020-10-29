@@ -18,10 +18,11 @@ body {
 }
 .game {
   grid-area: game;
+  height: 70vh;
 }
 
 section {
-  height: 50vh;
+  /* height: 50vh; */
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
