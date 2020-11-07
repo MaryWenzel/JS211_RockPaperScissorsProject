@@ -4,148 +4,38 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #126ab4;
-  height: 100vh;
-}
-
-.game-grid {
+.grid-container {
   display: grid;
-  grid-template-columns: 0.6fr 1.9fr 0.5fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr 1fr;
   gap: 0px 0px;
-  grid-template-areas: ". game .";
+  grid-template-areas:
+    "rps-header rps-header ."
+    "letf-hand-box result comp-hand-box"
+    ". input-box ."
+    ". button-box .";
 }
-.game {
-  grid-area: game;
-  height: 70vh;
+.rps-header {
+  grid-area: rps-header;
 }
-
-section {
-  /* height: 50vh; */
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url("./images/background.jpg");
-  background-position: bottom;
-  object-fit: cover;
-  font-family: sans-serif;
-  border: 10px groove rgba(148, 164, 188, 0.522);
-  border-radius: 17px;
+.letf-hand-box {
+  grid-area: letf-hand-box;
 }
-
-.score {
-  color: white;
-  height: 18vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
-    0px 18px 23px rgba(0, 0, 0, 0.1);
+.comp-hand-box {
+  grid-area: comp-hand-box;
+}
+.input-box {
+  grid-area: input-box;
+}
+.button-box {
+  grid-area: button-box;
 }
 
-.score h2 {
-  font-size: 30px;
+.result-box {
+  grid-area: result;
 }
 
-.score p {
-  text-align: center;
-  padding: 15px;
-  font-size: 24px;
-}
-
-.intro {
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  color: rgb(232, 232, 232);
-  transition: opacity 0.5s ease;
-}
-
-.intro h1 {
-  font-size: 50px;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
-    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
-    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
-    0 20px 20px rgba(0, 0, 0, 0.15);
-  background-color: #126bb4d4;
-  border-style: ridge;
-  border-radius: 50%;
-  width: 840px;
-  text-align: center;
-}
-
-.intro button,
-.match button {
-  width: 190px;
-  height: 120px;
-  background: none;
-  border: none;
-  color: rgb(232, 232, 232);
-  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
-  font: "Museo700";
-  font-size: 28px;
-  font-weight: 600;
-  background-color: #94a4bc;
-  border-radius: 75px;
-  cursor: pointer;
-  box-shadow: 2px 4px #126bb497;
-}
-
-.match {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.5s ease 0.5s;
-}
-
-.winner {
-  color: rgb(232, 232, 232);
-  text-align: center;
-  font-size: 50px;
-  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
-    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
-    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
-    0 20px 20px rgba(0, 0, 0, 0.15);
-  background-color: #126bb4d4;
-  border-radius: 50%;
-  border-style: ridge;
-}
-
-.options {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  align-self: flex-end;
-}
-
-.hands {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.player-hand {
-  transform: rotateY(180deg);
-  padding-left: 30%;
-}
-
-div.fadeOut {
-  opacity: 0;
-  pointer-events: none;
-}
-
-div.fadeIn {
-  opacity: 1;
-  pointer-events: all;
-}
-
-@keyframes shakePlayer {
+/* @keyframes shakePlayer {
   0% {
     transform: rotateY(180deg) translateY(0px);
   }
@@ -203,4 +93,4 @@ div.fadeIn {
   100% {
     transform: translateY(0px);
   }
-}
+} */

@@ -3,44 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
-  <div class="score">
-    <div class="player-score">
-      <h2>Player</h2>
-      <p>0</p>
+  <main class="grid-container">
+    <div class="rps-header">
+      <h1>Rock Paper Scissors</h1>
     </div>
-    <div class="computer-score">
+    <div class="letf-hand-box">
+      <h2>Player 1</h2>
+      <img src="images/leftRock.png" id="leftHand" alt="rock hand">
+    </div>
+    <div class="comp-hand-box">
       <h2>Computer</h2>
-      <p>0</p>
+      <img src="images/rock.png" id="rightHand" alt="rock hand">
     </div>
-  </div>
-  <section class="game">
-    <!-- SCORE BOARD -->
-    <div class="intro">
-      <h1>  Rock Paper Scissors  </h1>
-      <button>LET'S GO!</button>
+    <div class="input-box">
+      <label for="player-selection">Type in Rock, Paper, or Scissors</label>
+      <input type="text" id="player-selection" name="player-selection" >
     </div>
-
-    <div class="match fadeOut">
-      <h2 class="winner">Pick Your Poison.</h2>
-      <div class="hands">
-        <img src="./images/rock.png" alt="" class="player-hand">
-        <img src="./images/rock.png" alt="" class="computer-hand">
-      </div>
-      <div class="options">
-        <button class="rock">rock</button>
-        <button class="paper">paper</button>
-        <button class="scissors">scissors</button>
-      </div>
+    <div class="button-box">
+      <button id="shoot-button" onclick="rockPaperScissors()">Shoot!</button>
     </div>
-    
-    
-  </section>
-
+    <div class="result-box" id="result-box"></div>
+  </main>
   <script src="main.js"></script>
 </body>
 </html>
