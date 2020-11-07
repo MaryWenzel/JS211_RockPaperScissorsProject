@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock Paper Scissors</title>
+  <!-- Font link -->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/waltograph" type="text/css"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Rock, Paper, Scissors</h1>
   <main class="grid-container">
     <div class="rps-header">
-      <h1>Rock Paper Scissors</h1>
     </div>
     <div class="letf-hand-box">
       <h2>Player 1</h2>
@@ -19,15 +21,13 @@
       <h2>Computer</h2>
       <img src="images/rock.png" id="rightHand" alt="rock hand">
     </div>
-    <div class="input-box">
-      <label for="player-selection">Type in Rock, Paper, or Scissors</label>
-      <input type="text" id="player-selection" name="player-selection" >
-    </div>
-    <div class="button-box">
-      <button id="shoot-button" onclick="rockPaperScissors()">Shoot!</button>
-    </div>
     <div class="result-box" id="result-box"></div>
   </main>
+  <footer>
+    <label for="player-selection">Type in Rock, Paper, or Scissors</label>
+      <input type="text" id="player-selection" name="player-selection" >
+    <button id="shoot-button" onclick="rockPaperScissors()">Shoot!</button>
+  </footer>
   <script src="main.js"></script>
 </body>
 </html>
